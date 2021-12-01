@@ -61,7 +61,7 @@ fit_data <- raw_data %>%
 # Write a function to extract predictions
 
 get_preds <- function(mod) {
-  grid <- seq(0:10)
+  grid <- 0:10
   df <- data.frame(x=grid)
   preds <- predict(mod, newdata = df)
   df %>% mutate(y = preds)
